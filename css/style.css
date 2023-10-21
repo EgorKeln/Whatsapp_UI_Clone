@@ -151,7 +151,16 @@ header .action a {
 }
 
 .buttons label {
-  width: 33.33%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 30%;
   color: #fff;
   opacity: 0.75;
   text-align: center;
@@ -162,9 +171,51 @@ header .action a {
   cursor: pointer;
 }
 
+.buttons label.community {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 10%;
+  color: #fff;
+  opacity: 0.75;
+  text-align: center;
+  padding: 5px 0;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.9em;
+  cursor: pointer;
+}
+
+.buttons label b {
+  background: #fff;
+  color: #008069;
+  min-width: 20px;
+  height: 20px;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 0.75em;
+}
+
 .tabs input:nth-child(1):checked ~ .buttons label:nth-child(1),
 .tabs input:nth-child(2):checked ~ .buttons label:nth-child(2),
-.tabs input:nth-child(3):checked ~ .buttons label:nth-child(3) {
+.tabs input:nth-child(3):checked ~ .buttons label:nth-child(3),
+.tabs input:nth-child(4):checked ~ .buttons label:nth-child(4) {
   opacity: 1;
 }
 
@@ -172,7 +223,6 @@ header .action a {
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 33.333%;
   height: 3px;
   background: #fff;
   -webkit-transition: 0.5s;
@@ -181,19 +231,27 @@ header .action a {
 
 .tabs input:nth-child(1):checked ~ .buttons .underline {
   left: 0;
+  width: 10%;
 }
 
 .tabs input:nth-child(2):checked ~ .buttons .underline {
-  left: 33.333%;
+  left: 10%;
+  width: 30%;
 }
 
 .tabs input:nth-child(3):checked ~ .buttons .underline {
-  left: 66.8%;
+  left: 40%;
+  width: 30%;
+}
+
+.tabs input:nth-child(4):checked ~ .buttons .underline {
+  left: 70%;
+  width: 30%;
 }
 
 .content {
   position: relative;
-  width: 1020px;
+  width: 1360px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -207,6 +265,16 @@ header .action a {
   width: 340px;
 }
 
+.content .box img {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .tabs input:nth-child(1):checked ~ .content {
   left: 0px;
 }
@@ -217,6 +285,10 @@ header .action a {
 
 .tabs input:nth-child(3):checked ~ .content {
   left: -680px;
+}
+
+.tabs input:nth-child(4):checked ~ .content {
+  left: -1020px;
 }
 
 .content .data {
@@ -243,6 +315,7 @@ header .action a {
   gap: 10px;
   padding: 15px 10px;
   cursor: pointer;
+  overflow: hidden;
 }
 
 .chatlist .block:hover {
@@ -282,9 +355,8 @@ header .action a {
 }
 
 .chatlist .block .details .listHead h4 {
-  font-size: 1em;
+  font-size: 0.9em;
   font-weight: 600;
-  width: 100%;
   color: #111;
 }
 
@@ -309,7 +381,7 @@ header .action a {
   color: #555;
   display: -webkit-box;
   -webkit-line-clamp: 1;
-  font-size: 0.9em;
+  font-size: 0.8em;
   text-overflow: ellipsis;
   -webkit-box-orient: vertical;
 }
@@ -339,4 +411,38 @@ header .action a {
       -ms-flex-align: center;
           align-items: center;
   font-size: 0.75em;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #bbb;
+}
+
+.status .plus {
+  position: absolute;
+  top: 38px;
+  left: 39px;
+  width: 25px;
+  height: 25px;
+  background: #008069;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  font-size: 1.5em;
 }
