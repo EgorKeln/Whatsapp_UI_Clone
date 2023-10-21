@@ -691,6 +691,7 @@ ion-icon {
 .messageBox .message {
   position: relative;
   padding: 10px;
+  margin: 0 0 10px 0;
   background: #fff;
   border-radius: 10px;
   border-top-left-radius: 0;
