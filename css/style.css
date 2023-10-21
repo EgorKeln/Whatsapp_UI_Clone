@@ -165,7 +165,6 @@ header .action a {
   opacity: 0.75;
   text-align: center;
   padding: 5px 0;
-  text-transform: uppercase;
   font-weight: 700;
   font-size: 0.9em;
   cursor: pointer;
@@ -225,8 +224,8 @@ header .action a {
   bottom: 0;
   height: 3px;
   background: #fff;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .tabs input:nth-child(1):checked ~ .buttons .underline {
@@ -255,9 +254,8 @@ header .action a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  overflow: hidden;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .content .box {
@@ -291,7 +289,7 @@ header .action a {
   left: -1020px;
 }
 
-.content .data {
+message_p .content .data {
   position: relative;
   width: 100%;
   height: 510px;
@@ -357,6 +355,7 @@ header .action a {
 .chatlist .block .details .listHead h4 {
   font-size: 0.9em;
   font-weight: 600;
+  width: 100%;
   color: #111;
 }
 
@@ -375,6 +374,7 @@ header .action a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 3px 0 0 0;
 }
 
 .chatlist .block .details p {
@@ -382,6 +382,7 @@ header .action a {
   display: -webkit-box;
   -webkit-line-clamp: 1;
   font-size: 0.8em;
+  overflow: hidden;
   text-overflow: ellipsis;
   -webkit-box-orient: vertical;
 }
@@ -445,4 +446,341 @@ header .action a {
           align-items: center;
   color: #fff;
   font-size: 1.5em;
+}
+
+.box label {
+  padding: 0 15px;
+  font-weight: 600;
+  color: #555;
+  font-size: 0.85em;
+}
+
+.unseen .imgbx {
+  -webkit-box-shadow: 0 0 0 2px #fff, 0 0 0 4px #008069;
+          box-shadow: 0 0 0 2px #fff, 0 0 0 4px #008069;
+}
+
+.seen .imgbx {
+  -webkit-box-shadow: 0 0 0 2px #fff, 0 0 0 4px #bbb;
+          box-shadow: 0 0 0 2px #fff, 0 0 0 4px #bbb;
+}
+
+.green {
+  background: #008069;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  font-size: 1.5em;
+  rotate: -45deg;
+}
+
+.incoming ion-icon {
+  color: #0f0;
+  rotate: 45deg;
+}
+
+.outgoing ion-icon {
+  color: #f00;
+  rotate: 45deg;
+}
+
+.call {
+  font-size: 1.5em;
+  color: #008069;
+}
+
+.data .chatlist .block .details .listHead .red {
+  color: #f00;
+}
+
+.zip ion-icon {
+  background: #fff;
+  color: #008069;
+  font-size: 1.5em;
+  padding: 0 11px;
+  margin-left: 10px;
+}
+
+.data .chatlist .zip {
+  padding: 8px 0 3px 0;
+  background: #fff;
+}
+
+.quickBtn {
+  position: absolute;
+  bottom: 20px;
+  right: 13px;
+  z-index: 10000;
+}
+
+.quickBtn .btn {
+  background: #008069;
+  width: 50px;
+  height: 50px;
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  font-size: 1.35em;
+  cursor: pointer;
+  display: none;
+  -webkit-box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.25);
+          box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.25);
+}
+
+.tabs input:nth-child(2):checked ~ .quickBtn .btn:nth-child(1) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.tabs input:nth-child(3):checked ~ .quickBtn .btn:nth-child(2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.tabs input:nth-child(4):checked ~ .quickBtn .btn:nth-child(3) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.quickBtn .btn .pencil {
+  position: absolute;
+  top: -50px;
+  width: 35px;
+  height: 35px;
+  background: #d1f1ec;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #008069;
+  border-radius: 10px;
+  font-size: 1.2em;
+  -webkit-box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.25);
+          box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.25);
+}
+
+.chatBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #efe6dd;
+  z-index: 10000;
+}
+
+.chatBox.hide {
+  display: none;
+}
+
+.chatBox::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(/img/back.jpg);
+  opacity: 0.1;
+}
+
+.chat_header {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  background: #008069;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.chat_header .imgcontent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+}
+
+.chat_header .imgcontent ion-icon {
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.25em;
+}
+
+ion-icon {
+  cursor: pointer;
+}
+
+.chat_header .imgcontent .imgBx {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.chat_header .imgcontent .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.chat_header .imgcontent h3 {
+  color: #fff;
+  font-size: 1em;
+  font-weight: 500;
+  line-height: 1.1em;
+}
+
+.chat_header .imgcontent h3 span {
+  font-size: 0.7em;
+  font-weight: 400;
+}
+
+.actionBtns {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #fff;
+  gap: 15px;
+}
+
+.messageBox {
+  position: relative;
+  padding: 20px;
+  height: 530px;
+}
+
+.messageBox .message {
+  position: relative;
+  padding: 10px;
+  background: #fff;
+  border-radius: 10px;
+  border-top-left-radius: 0;
+}
+
+.messageBox .message::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -10px;
+  border: 10px solid transparent;
+  border-top: 10px solid #fff;
+}
+
+.time {
+  position: relative;
+  display: block;
+  font-size: 0.7em;
+  width: 100%;
+  text-align: end;
+  color: #777;
+}
+
+.messageInput {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.messageInput .input {
+  position: relative;
+  background: #fff;
+  padding: 5px 10px;
+  height: 40px;
+  width: 270px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 40px;
+}
+
+.messageInput .input ion-icon {
+  color: #777;
+  cursor: pointer;
+  font-size: 1.4em;
+}
+
+.messaheInput .input input {
+  border: none;
+  outline: none;
+  padding: 5px;
+}
+
+.mic {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background: #008069;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  font-size: 1.2em;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.deg45 {
+  rotate: 45deg;
 }
